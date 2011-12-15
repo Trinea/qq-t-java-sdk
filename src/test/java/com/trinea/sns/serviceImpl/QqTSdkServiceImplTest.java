@@ -26,11 +26,14 @@ import com.trinea.sns.util.QqTConstant;
 
 public class QqTSdkServiceImplTest extends TestCase {
 
-    String            QQT_APP_KEY    = "97763098c1a04d799ce9600d954dcec1";
-    String            QQT_APP_SECRET = "d49195cec3fddb17abaaa97ab36f0246";
-
-    String            ACCESS_TOKEN   = "61c19bd2e74e4ad48db4e82c4369e059";
-    String            TOKEN_SECRET   = "c52a16569cbd2958ffcf29831f3c5c33";
+    /** 应用key **/
+    String            QQT_APP_KEY    = "***";
+    /** 应用secret **/
+    String            QQT_APP_SECRET = "***";
+    /** 用户accesstoken **/
+    String            ACCESS_TOKEN   = "***";
+    /** 用户tokenSecret **/
+    String            TOKEN_SECRET   = "***";
     QqTAppAndToken    qqTAppAndToken;
     QqTSdkServiceImpl qqTSdkService;
 
@@ -133,12 +136,6 @@ public class QqTSdkServiceImplTest extends TestCase {
     }
 
     public void testGetTimeLineCommonStr() {
-        QqTAppAndToken qqTAppAndToken = new QqTAppAndToken();
-        qqTAppAndToken.setAppKey("97763098c1a04d799ce9600d954dcec1");
-        qqTAppAndToken.setAppSecret("d49195cec3fddb17abaaa97ab36f0246");
-        qqTAppAndToken.setAccessToken("91f752a5c2ba4a07bb95f57de64b99c8");
-        qqTAppAndToken.setTokenSecret("782f58520ea79e29a47107a1eb1093ea");
-
         qqTSdkService = new QqTSdkServiceImpl();
         qqTSdkService.setQqTAppAndToken(qqTAppAndToken);
         qqTSdkService.addStatus("lala", "");
